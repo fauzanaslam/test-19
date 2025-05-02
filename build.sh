@@ -1,0 +1,1 @@
+docker build -f dockerfile -t angular/test-19:1.0.1 . && docker compose up -d --force-recreate
