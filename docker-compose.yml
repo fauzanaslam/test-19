@@ -1,6 +1,6 @@
 services:
   angular-app:
-    build: .
+    image: angular/test-19:1.0.0
     container_name: angular_app
     ports:
       - "4200:4200"
