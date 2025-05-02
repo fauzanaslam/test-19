@@ -1,13 +1,19 @@
-FROM node:22-alpine
-
+# Stage 1: Build Angular App
+FROM node:22-alpine AS builder
 WORKDIR /app
 
 COPY package*.json ./
-
 RUN npm install
 
 COPY . .
+RUN npm run build --configuration production
 
-EXPOSE 4200
+# Stage 2: Serve with Nginx
+FROM nginx:alpine
+COPY --from=builder /app/dist/test-19 /usr/share/nginx/html
 
-CMD ["npm", "start"]
+# Optional: custom nginx config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
