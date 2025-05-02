@@ -3,5 +3,5 @@ services:
   angular-app:
     build: .
     ports:
-      - "8080:80"  # Sesuaikan port agar lebih umum
+      - "4002:80"  # Sesuaikan port agar lebih umum
     container_name: angular-app
