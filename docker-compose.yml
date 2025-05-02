@@ -1,0 +1,9 @@
+services:
+  angular-app:
+    build: .
+    container_name: angular_app
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/app
+    command: npm start
