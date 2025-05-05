@@ -13,7 +13,7 @@ import { PrimaryButtonComponent } from "../primary-button/primary-button.compone
           <img src="/logoimg.png" alt="logo" width="70" class="p-3" />
         </a>
         <div class="flex">
-          <div class=" px-4 py-6">Pasar testtt</div>
+          <div class=" px-4 py-6">Pasar</div>
           <div class=" px-4 py-6">Tentang Kami</div>
           <div class=" px-4 py-6">Kontak Kami</div>
         </div>
